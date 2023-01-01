@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: trial
-        image: canberkerkmen/trial:v2
+        image: canberkerkmen/trial:v5
         ports:
         - containerPort: 8080
 ---
