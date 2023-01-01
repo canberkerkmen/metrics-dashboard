@@ -4,6 +4,11 @@ FROM python:3.7-slim
 
 # Copy local code to the container image.
 ENV APP_HOME /app
+
+ENV PROMETHEUS_MULTIPROC_DIR /tmp/prometheus-multiproc
+RUN rm -rf ${PROMETHEUS_MULTIPROC_DIR}
+RUN mkdir -p ${PROMETHEUS_MULTIPROC_DIR}
+
 WORKDIR $APP_HOME
 COPY . ./
 

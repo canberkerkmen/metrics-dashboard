@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    meta.helm.sh/release-name: prometheus
+    meta.helm.sh/release-namespace: monitoring
+  labels:
+    release: prometheus
+  name: service-monitor
+  namespace: monitoring
+spec:
+  endpoints:
+  - port: lb-port
+  namespaceSelector:
+    matchNames:
+    - default
+  selector:
+    matchLabels:
+      prometheus.io/scrape: "true"
