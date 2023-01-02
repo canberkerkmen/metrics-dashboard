@@ -42,6 +42,8 @@ SLI - The measurement of performance in a period of time for e.g. There is 98% s
 
 ![frontend](answer-img/frontend.png)
 
+![uptime](answer-img/uptime.png)
+
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
 
